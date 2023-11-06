@@ -43,114 +43,234 @@ void board()	{
 
 void player()	{
 
+	int choise = '';
 
+	cout << "Player 1 (X) - Enter a number from 1 to 9: ";
+	cin >> choise;
 
+	if (choise == 1)	{
+		square[0] = 'x'
+	}
+
+	else if (choise == 2)	{
+		square[1] = 'x'
+	}
+
+	else if (choise == 3)	{
+		square[2] = 'x'
+	}
+
+	else if (choise == 4)	{
+		square[3] = 'x'
+	}
+
+	else if (choise == 5)	{
+		square[4] = 'x'
+	}
+
+	else if (choise == 6)	{
+		square[5] = 'x'
+	}
+
+	else if (choise == 7)	{
+		square[6] = 'x'
+	}
+
+	else if (choise == 8)	{
+		square[7] = 'x'
+	}
+
+	else if (choise == 9)	{
+		square[8] = 'x'
+	}
+	
 }
 
 //--------------------------------------------------------------------------
 //--------------------------------------------------------------------------
 
-string compOne(char choise);	{
-
-	string choiseFinal;
+void comp();	{
 
 	srand(time(0));
-	int num = rand() % 3 + 1;
+	int choise = rand() % 9 + 1;
 
-//------------------------
-//------------------------
 
-	if choise == TOP {
-
-		if (num == 1)	{
-			choiseFinal = 'Top Left';
-		}	
-
-		else if (num == 2)	{
-			choiseFinal = 'Top Mid';
-		}
-
-		else if (num == 3) {
-			choiseFinal = 'Top Right';
-		}
-
+	if (choise == 1)	{
+		square[0] = 'o'
 	}
 
-//------------------------
-//------------------------
-
-	else if choise == MID {
-
-			if (num == 1)	{
-				choiseFinal = 'Mid Left';
-			}	
-
-			else if (num == 2)	{
-				choiseFinal = 'Mid';
-			}
-
-			else if (num == 3) {
-				choiseFinal = 'Mid Right';
-			}
-
-		}
-
-//------------------------
-//------------------------
-
-	else if choise == BOT	{
-
-			if (num == 1)	{
-				choiseFinal = 'Bot Left';
-			}	
-
-			else if (num == 2)	{
-				choiseFinal = 'Bot Mid';
-			}
-
-			else if (num == 3) {
-				choiseFinal = 'Bot Right';
-			}
-
+	else if (choise == 2)	{
+		square[1] = 'o'
 	}
 
-
-}
-
-
-//------------------------
-//------------------------
-//------------------------
-
-
-char compTwo() {
-
-	srand(time(0));
-	char cChoiseP1 = ' ';
-
-	int num = rand() % 3 + 1;		// Random number between 1 and 3
-
-	if (num == 1)	{
-		cChoiseP1 = 't';
-	}	
-
-	else if (num == 2)	{
-		cChoiseP1 = 'm';
+	else if (choise == 3)	{
+		square[2] = 'o'
 	}
 
-	else if (num == 3) {
-		cChoiseP1 = 'b';
+	else if (choise == 4)	{
+		square[3] = 'o'
 	}
 
-	string cChoiseP2 = compOne(cChoiseP1);
-	return 0;
+	else if (choise == 5)	{
+		square[4] = 'o'
+	}
 
+	else if (choise == 6)	{
+		square[5] = 'o'
+	}
+
+	else if (choise == 7)	{
+		square[6] = 'o'
+	}
+
+	else if (choise == 8)	{
+		square[7] = 'o'
+	}
+
+	else if (choise == 9)	{
+		square[8] = 'o'
+	}
 }
 
 
 //--------------------------------------------------------------------------
 //--------------------------------------------------------------------------
+
+
+void check()	{
+
+	
+	if (square[0] == square[1] && square[1] == square[2])	{
+
+		if (square[0] == 'x')	{
+			cout << "Player wins!" << endl;
+		}
+
+		else if (square[0] == 'o')	{
+			cout << "Computer wins!" << endl;
+		}
+		
+	}
+
+		
+	else if (square[3] == square[4] && square[4] == square[5])	{
+
+		if (square[3] == 'x')	{
+			cout << "Player wins!" << endl;
+		}
+
+		else if (square[3] == 'o')	{
+			cout << "Computer wins!" << endl;
+		}
+		
+	}
+
+		
+	else if (square[6] == square[7] && square[7] == square[8])	{
+
+		if (square[6] == 'x')	{
+			cout << "Player wins!" << endl;
+		}
+
+		else if (square[6] == 'o')	{
+			cout << "Computer wins!" << endl;
+		}
+
+	}
+
+		
+	//------------------------
+	//------------------------
+	//------------------------
+
+		
+	else if (square[0] == square[3] && square[3] == square[6])	{
+
+		if (square[0] == 'x')	{
+			cout << "Player wins!" << endl;
+		}
+
+		else if (square[0] == 'o')	{
+			cout << "Computer wins!" << endl;
+		}
+		
+	}
+
+		
+	else if (square[1] == square[4] && square[4] == square[7])	{
+
+		if (square[1] == 'x')	{
+			cout << "Player wins!" << endl;
+		}
+
+		else if (square[1] == 'o')	{
+			cout << "Computer wins!" << endl;
+		}
+
+	}
+
+		
+	else if (square[2] == square[5] && square[5] == square[8])	{
+
+		if (square[2] == 'x')	{
+			cout << "Player wins!" << endl;
+		}
+
+		else if (square[2] == 'o')	{
+			cout << "Computer wins!" << endl;
+		}
+
+	}
+
+		
+	//------------------------
+	//------------------------
+	//------------------------
+
+	
+	else if (square[0] == square[4] && square[4] == square[8])	{
+
+		if (square[0] == 'x')	{
+			cout << "Player wins!" << endl;
+		}
+
+		else if (square[0] == 'o')	{
+			cout << "Computer wins!" << endl;
+		}
+
+	}
+
+		
+	else if (square[2] == square[4] && square[4] == square[6])	{
+
+		if (square[2] == 'x')	{
+			cout << "Player wins!" << endl;
+		}
+
+		else if (square[2] == 'o')	{
+			cout << "Computer wins!" << endl;
+		}
+
+	}
+
+}
+
+	
+//--------------------------------------------------------------------------
+//--------------------------------------------------------------------------
+
 
 int main() {
 
+	cout << "Welcome to Tic Tac Toe!" << endl;
+
+	while (True)	{
+		
+		board();
+		player();
+		comp();
+		check();	
+		
+	}
+	
 }
